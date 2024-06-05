@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from '@/styles/AuthForm.module.css';
+import Link from 'next/link';
 
 const RegistrationForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -26,6 +27,9 @@ const RegistrationForm = () => {
         <input type="password" id="confirmPassword" className={styles.input} required />
       </div>
       <button type="submit" className={styles.button}>Register</button>
+      <Link href='/login' className='center gap'>
+        Login
+      </Link>
     </form>
     </div>
   );
